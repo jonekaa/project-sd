@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chemical Simulation</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<nav></nav>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-2 bg-dark" style="padding: 0; height: 500px">
+					<div class="cabinet">
+						<div class="cabinet-top"></div>
+						<div class="shelf">
+							<div class="upper-left-triangle"></div>
+							<div class="upper-right-triangle"></div>
+							<div class="back">
+								<div class="row">
+									<div class="col-4" id="items">
+										<img src="assets\0.png" width="70px" height="65px" id="0" />
+										<span class="idx-hidden display_index_span_none">0</span>
+									</div>
+									<div class="col-4" id="items">
+										<img src="assets\1.png" width="70px" height="65px" id="1" />
+										<span class="idx-hidden display_index_span_none">1</span>
+									</div>
+									<div class="col-4" id="items">
+										<img src="assets\2.png" width="70px" height="65px" id="2" />
+										<span class="idx-hidden display_index_span_none">2</span>
+									</div>
+								</div>
+							</div>
+							<div class="front"></div>
+						</div>
+						<div class="shelf">
+							<div class="upper-left-triangle"></div>
+							<div class="upper-right-triangle"></div>
+							<div class="back">
+								<div class="row">
+									<div class="col-4" id="items">
+										<img src="assets\3.png" width="70px" height="65px" id="3" />
+										<span class="idx-hidden display_index_span_none">3</span>
+									</div>
+									<div class="col-4" id="items">
+										<img src="assets\4.png" width="70px" height="65px" id="4" />
+										<span class="idx-hidden display_index_span_none">4</span>
+									</div>
+									<div class="col-4" id="items">
+										<img src="assets\5.png" width="70px" height="65px" id="5" />
+										<span class="idx-hidden display_index_span_none">5</span>
+									</div>
+								</div>
+							</div>
+							<div class="front"></div>
+						</div>
+						<div class="shelf">
+							<div class="upper-left-triangle"></div>
+							<div class="upper-right-triangle"></div>
+							<div class="back">
+								<div class="row">
+									<div class="col-4" id="items">
+										<img src="assets\6.png" width="70px" height="65px" id="6" />
+										<span class="idx-hidden display_index_span_none">6</span>
+									</div>
+									<div class="col-4" id="items">
+										<img src="assets\7.png" width="70px" height="65px" id="7" />
+										<span class="idx-hidden display_index_span_none">7</span>
+									</div>
+									<div class="col-4" id="items">
+										<img src="assets\8.png" width="60px" height="65px" id="8" />
+										<span class="idx-hidden display_index_span_none">8</span>
+									</div>
+								</div>
+							</div>
+							<div class="front"></div>
+						</div>
+						<div class="shelf">
+							<div class="upper-left-triangle"></div>
+							<div class="upper-right-triangle"></div>
+							<div class="back">
+								<div class="row">
+									<div class="col-4" id="items">
+										<img src="assets\9.png" width="70px" height="65px" id="9" />
+										<span class="idx-hidden display_index_span_none">9</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\10.png"
+											width="70px"
+											height="65px"
+											id="10" />
+										<span class="idx-hidden display_index_span_none">10</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\11.png"
+											width="70px"
+											height="65px"
+											id="11" />
+										<span class="idx-hidden display_index_span_none">11</span>
+									</div>
+								</div>
+							</div>
+							<div class="front"></div>
+						</div>
+						<div class="shelf">
+							<div class="upper-left-triangle"></div>
+							<div class="upper-right-triangle"></div>
+							<div class="back">
+								<div class="row">
+									<div class="col-4" id="items">
+										<img
+											src="assets\12.png"
+											width="70px"
+											height="65px"
+											id="12" />
+										<span class="idx-hidden display_index_span_none">12</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\13.png"
+											width="70px"
+											height="65px"
+											id="13" />
+										<span class="idx-hidden display_index_span_none">13</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\14.png"
+											width="70px"
+											height="65px"
+											id="14" />
+										<span class="idx-hidden display_index_span_none">14</span>
+									</div>
+								</div>
+							</div>
+							<div class="front"></div>
+						</div>
+						<div class="row" style="margin-top: 20px; margin-left: -15px">
+							<div class="col-6">
+								<button class="btn btn-primary plus" id="assign">Go</button>
+							</div>
+							<div class="col-6">
+								<button
+									class="btn btn-danger reset"
+									style="width: 100%; height: 100%; border: 5px solid black">
+									<a href="index.html">Reset</a>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-10"
+					style="
+						background-color: #966f33;
+						position: relative;
+						width: 83, 6%;
+						max-height: 100%;
+						overflow: auto;
+					">
+					<div
+						class="card mb-3 mt-3 bg-success"
+						style="max-width: 100%; height: 93%">
+						<div class="row g-0">
+							<div class="row" id="board" style="max-width: 90%; margin: 10px ">
+								<!-- tmpt hasil pembagian lemari -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-2 bg-alert" style="padding: 0; height: 200px">
+					<div class="cabinet cabinet-bawah">
+						<div class="shelf" style="height: 90px">
+							<div class="upper-left-triangle"></div>
+							<div class="upper-right-triangle"></div>
+							<div class="back" style="padding-top: 10px">
+								<div class="row">
+									<div class="col-4" id="items">
+										<img
+											src="assets\15.png"
+											width="70px"
+											height="65px"
+											id="15" />
+										<span class="idx-hidden display_index_span_none">15</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\16.png"
+											width="70px"
+											height="65px"
+											id="16" />
+										<span class="idx-hidden display_index_span_none">16</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\17.png"
+											width="60px"
+											height="65px"
+											id="17" />
+										<span class="idx-hidden display_index_span_none">17</span>
+									</div>
+								</div>
+							</div>
+							<div class="front"></div>
+						</div>
+						<div class="shelf" style="height: 90px">
+							<div class="upper-left-triangle"></div>
+							<div class="upper-right-triangle"></div>
+							<div class="back" style="padding-top: 10px">
+								<div class="row">
+									<div class="col-4" id="items">
+										<img
+											src="assets\18.png"
+											width="70px"
+											height="65px"
+											id="18" />
+										<span class="idx-hidden display_index_span_none">18</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\19.png"
+											width="70px"
+											height="65px"
+											id="19" />
+										<span class="idx-hidden display_index_span_none">19</span>
+									</div>
+									<div class="col-4" id="items">
+										<img
+											src="assets\20.png"
+											width="60px"
+											height="65px"
+											id="20" />
+										<span class="idx-hidden display_index_span_none">20</span>
+									</div>
+								</div>
+							</div>
+							<div class="front"></div>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="col-10"
+					style="
+						background-image: url(assets/meja.png);
+						background-size: cover;
+					">
+					<div class="chemical-contain" id="simule"></div>
+				</div>
+			</div>
+		</div>
+		<script src="graph.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+			crossorigin="anonymous"></script>
+	</body>
+</html>
