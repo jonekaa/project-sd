@@ -1,4 +1,4 @@
-# project-sd
+# Data Structure Project
 <h2> CHEMICAL SOLUTIONS </h2>
 Kelompok 4 <br>
 Elvina Wirawan - C14210087 <br>
